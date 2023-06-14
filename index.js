@@ -12,7 +12,7 @@ const apik = "iAyghrxRdXMCpn1zShZBLEZwKkugVdgK2IQPF1Bu";
 
 server.set("view engine", "ejs");
 server.set("views", path.join(__dirname, "src/views"));
-server.use(express.static("./public"));
+server.use(express.static("public"));
 
 server.get("/", (req, res) => {
   fetch(url + apik)
