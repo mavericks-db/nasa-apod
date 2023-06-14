@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
 *,
 ::before,
 ::after {
@@ -10,5 +12,36 @@ html {
 }
 
 body {
-  background-color: ivory;
+  background: linear-gradient(to right, #000000, #434343);
+  color: white;
+}
+
+#header {
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.apod__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#apod {
+  width: 420px;
+  height: 315px;
+}
+
+#title {
+  margin: 1rem;
+}
+
+.explanation {
+  text-align: left;
+  width: 80%;
+  font-family: 'Roboto', sans-serif;
+  border: 1px dotted #999;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
 }

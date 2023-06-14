@@ -3,18 +3,25 @@
 <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-<h1>NASA APOD</h1>
+<div class="apod__container">
+<h1 id="header">ASTRONOMY PICTURE OF THE DAY</h1>
 
-<h1><%= apidata.title %></h1>
-<h2><%= apidata.date %></h2>
-<p><%= apidata.explanation %></p>
 
 <% if(apidata.media_type === "video") { %>
 <iframe width="420" height="315"
 src="<%= apidata.url %>">
 </iframe>
 <%} else { %>
-<img src="<%= apidata.url %>" alt="<%= apidata.title %>" width="500" height="600" >
+<img src="<%= apidata.url %>" alt="<%= apidata.title %>" id="apod" >
 <% } %>
+
+<h2 id="title"><%= apidata.title %></h2>
+<h3><%= apidata.date %></h3>
+
+
+<p class="explanation"><%= apidata.explanation %></p>
+</div>
+
 </body>
+
 </html>
