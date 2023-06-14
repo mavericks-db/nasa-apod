@@ -1,4 +1,5 @@
 // import packages
+const path = require("path");
 const express = require("express");
 require("dotenv").config();
 
@@ -10,7 +11,7 @@ const url = "https://api.nasa.gov/planetary/apod?api_key=";
 const apik = "iAyghrxRdXMCpn1zShZBLEZwKkugVdgK2IQPF1Bu";
 
 server.set("view engine", "ejs");
-server.set("views", "./src/views");
+server.set("views", path.join(__dirname, "src/views"));
 server.use(express.static("./public"));
 
 server.get("/", (req, res) => {
