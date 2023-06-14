@@ -5,9 +5,9 @@ require("dotenv").config();
 const server = express();
 
 // env
-const port = process.env.PORT;
-const url = process.env.URL;
-const apik = process.env.APIK;
+const port = 3001;
+const url = "https://api.nasa.gov/planetary/apod?api_key=";
+const apik = "iAyghrxRdXMCpn1zShZBLEZwKkugVdgK2IQPF1Bu";
 
 server.set("view engine", "ejs");
 server.set("views", "./src/views");
@@ -24,3 +24,5 @@ server.get("/", (req, res) => {
 server.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+module.exports = server;
